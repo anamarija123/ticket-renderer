@@ -1,0 +1,24 @@
+
+
+class EmptyCommand
+{
+ 
+/* Execute method in Comment command 
+    1. function recieve line as parameter
+    2. checking with regex if there is key in receveid line
+    3. if there is present key word, function prints empty lines 
+*/
+    execute (scriptLine)
+    {
+        const vscode = require('vscode');
+        let debugConsole = vscode.debug.activeDebugConsole;
+        var emptyPattern = /^\s*$/;
+
+        //if is detected empty line, print new line
+        if (emptyPattern.test(scriptLine))
+        {            
+            //Skip the empty line
+        }
+    }
+}
+exports.EmptyCommandProcessor = new EmptyCommand();

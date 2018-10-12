@@ -1,0 +1,22 @@
+
+class CommentCommand
+{
+
+/* Execute method in Comment command 
+    1. function recieve line as parameter
+    2. checking with regex if there is key in receveid line
+    3. if there is present key word, function doesnt print anything. 
+*/
+
+    execute (scriptLine){
+        // const vscode = require('vscode');
+        // let debugConsole = vscode.debug.activeDebugConsole;
+
+        var commentPattern = /^\s*;.*$/;
+        if (commentPattern.test(scriptLine))
+        {
+           //nothing to do 
+        }
+    }
+}
+exports.CommentCommandProcessor = new CommentCommand();
