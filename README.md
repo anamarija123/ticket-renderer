@@ -32,5 +32,5 @@ Initial release of ticket script renderer
 
 ## Working with Ticket Renderer
 
-ALT + P for executing ticket file
-Press Ctrl+Space (Windows, Linux) or Cmd+Space (macOS) to see a list of Markdown snippets
+# ALT + P for executing ticket file
+# Press Ctrl+Space (Windows, Linux) or Cmd+Space (macOS) to see a list of Markdown snippets
