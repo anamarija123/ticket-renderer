@@ -1,4 +1,4 @@
-# Ticket script renderer extenstion README
+# Ticket script renderer extension README
 
 Ticket script renderer is intended for rendering script language. Support extensions for ticket file are: .ticket,.ini and .tck. Every tag writed in ticket language must be replaced by user context loaded from path writed in ticket file.
 
