@@ -1,0 +1,57 @@
+{
+    "name": "ticketscript",
+    "displayName": "Ticket script renderer",
+    "description": "EFT POS Ticket definition file renderer extension",
+    "version": "1.0.0",
+    "publisher": "Laka industrija",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "activationEvents": [
+        "onLanguage:ticketscript",
+        "onCommand:Ticket.preview"
+    ],
+    "main": "./pview/Ticket",
+    "contributes": {
+        "languages": [{
+            "id": "TicketScript",
+            "aliases": ["TicketScript", "Ticket"],
+            "extensions": [".tck",".ini",".ticket"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "TicketScript",
+            "scopeName": "source.ticketscript",
+            "path": "./syntaxes/ticketscript.tmLanguage.json"
+        }],
+        "snippets": [{
+                "language": "TicketScript",
+                "path": "./snippets/ticketscript.json"
+        }],
+        "commands": [
+		    {
+				"command": "Ticket.preview",
+				"title": "Ticket preview",
+				"category": "preview"
+            }],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "editorLangId == ticketscript",
+                    "command": "Ticket.preview",
+                    "group": "navigation"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "Ticket.preview",
+                "key": "Alt+p"
+            }
+        ]
+    }
+}
